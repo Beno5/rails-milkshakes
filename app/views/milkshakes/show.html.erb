@@ -1,0 +1,11 @@
+
+<h1><%= @milkshake.name %></h1>
+<% @milkshake.doses.each do |dose| %>
+<h3><%= dose.description %> - <%= dose.ingredient.name %></h3>
+<% end %>
+<%= link_to 'Add ingredient', new_milkshake_dose_path(@milkshake) %>
+<h4><%= @milkshake.description %></h4>
+
+<h3> <%= @milkshake.price %></h3>
+
+<%= link_to "All milkshakes", milkshakes_path %>

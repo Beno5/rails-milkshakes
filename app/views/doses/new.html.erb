@@ -1,0 +1,7 @@
+<h1>Add new doses!</h1>
+
+<%= simple_form_for [ @milkshake, @dose ] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, label_method: :name, value_method: :id, include_blank: false %>
+   <%= f.submit "Add ingrediant" %>
+<% end %>

@@ -1,0 +1,5 @@
+<% @milkshakes.each do |milkshake| %>
+<h2><%= link_to milkshake.name, milkshake_path(milkshake) %> - <%= milkshake.price %></h2>
+<% end %>
+
+<%= link_to "Make new milkshake!", new_milkshake_path %>
