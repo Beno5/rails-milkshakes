@@ -1,13 +1,32 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <%= link_to "Home", root_path %></a>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Milkshakes", milkshakes_path %></a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <div class="container">
+<div class="container index"><h1>All milkshakes:</h1></div>
+<div class="container index two"><h3><%= link_to "Make new milkshake!", new_milkshake_path, class: "btn btn-primary" %></h3></div>
 <div class="cards">
 
 <% @milkshakes.each do |milkshake| %>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-   <h2><%= link_to milkshake.name, milkshake_path(milkshake) %> - <%= milkshake.price %></h2>
+   <%= link_to milkshake.name, milkshake_path(milkshake) %> 
   </div>
 <% end %>
 
-<%= link_to "Make new milkshake!", new_milkshake_path %>
+
 
 </div>
 

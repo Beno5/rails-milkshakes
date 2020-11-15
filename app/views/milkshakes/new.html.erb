@@ -1,8 +1,31 @@
-<h1>Make your own shake!</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  
 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <%= link_to "Home", root_path %></a>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Milkshakes", milkshakes_path %></a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+<div class="container index"><h1>Make your own milkshake:</h1></div>
+<div class="container form">
 <%= simple_form_for @milkshake do |f| %>
   <%= f.input :name %>
    <%= f.input :description %>
     <%= f.input :price %>
-  <%= f.submit "Submit milkshake" %>
+  <%= f.submit "Submit milkshake", class: "btn btn-primary" %>
 <% end %>
+</div>
+
+
+</div>
+</div>
