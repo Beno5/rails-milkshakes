@@ -37,6 +37,6 @@ class MilkshakesController < ApplicationController
   end
 
   def milkshake_params
-    params.require(:milkshake).permit(:name, :description, :price)
+    params.require(:milkshake).permit(:name, :description, :price, :photo)
   end
 end

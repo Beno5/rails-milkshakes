@@ -1,4 +1,4 @@
-
+<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 <h1><%= @milkshake.name %></h1>
 <% @milkshake.doses.each do |dose| %>
 <h3><%= dose.description %> - <%= dose.ingredient.name %></h3>
