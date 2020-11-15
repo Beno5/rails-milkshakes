@@ -1,5 +1,14 @@
+<div class="container">
+<div class="cards">
+
 <% @milkshakes.each do |milkshake| %>
-<h2><%= link_to milkshake.name, milkshake_path(milkshake) %> - <%= milkshake.price %></h2>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+   <h2><%= link_to milkshake.name, milkshake_path(milkshake) %> - <%= milkshake.price %></h2>
+  </div>
 <% end %>
 
 <%= link_to "Make new milkshake!", new_milkshake_path %>
+
+</div>
+
+</div>
