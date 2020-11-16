@@ -5,4 +5,5 @@ class Milkshake < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :price, presence: true
+  validates :photo, presence: true
 end
