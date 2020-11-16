@@ -21,7 +21,9 @@ end
 
 puts 'adding milkshakes...'
 
+file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 milkshake1 = Milkshake.create!(name: 'bananna-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
+milkshake1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 milkshake2 = Milkshake.create!(name: 'chockolate-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
 milkshake3 = Milkshake.create!(name: 'protein-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
 milkshake4 = Milkshake.create!(name: 'kiwi-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
@@ -30,3 +32,10 @@ milkshake6 = Milkshake.create!(name: 'bomb-milkshake', price: 2, description: "I
 milkshake7 = Milkshake.create!(name: 'vanilla-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
 
 puts 'done'
+
+
+
+file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+milkshake1 = Milkshake.new(name: 'bananna-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
+milkshake1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+milkshake1.save!

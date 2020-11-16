@@ -17,7 +17,8 @@
 
 <div class="container-show">
 <div class="card-milkshake">
-<div class="card-image" style="background-image: url('https://picsum.photos/400/300')">
+<div class="card-image" style="background-image: url('<%= cl_image_path @milkshake.photo.key, height: 300, width: 400, crop: :fill %>')">
+
 </div>
 <div class="card-info">
 <h1><%= @milkshake.name %></h1>
