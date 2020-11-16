@@ -1,11 +1,43 @@
-<%= cl_image_tag @milkshake.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <%= link_to "Home", root_path %></a>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Milkshakes", milkshakes_path %></a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="container-show">
+<div class="card-milkshake">
+<div class="card-image" style="background-image: url('https://picsum.photos/400/300')">
+</div>
+<div class="card-info">
 <h1><%= @milkshake.name %></h1>
+<h5>- <%= @milkshake.description %></h5>
+
+<h4>Ingrediants:</h4>
+<ul>
 <% @milkshake.doses.each do |dose| %>
-<h3><%= dose.description %> - <%= dose.ingredient.name %></h3>
+<li class="list-show"><h6><%= dose.ingredient.name %> - <%= dose.description %> </h6><p class="delete_button"><%= link_to "",
+            dose_path(dose),
+            method: :delete,
+             class: "fas fa-times-circle",
+            data: { confirm: "Are you sure?" } %></p>
+
 <% end %>
+</ul>
+
 <%= link_to 'Add ingredient', new_milkshake_dose_path(@milkshake) %>
-<h4><%= @milkshake.description %></h4>
 
-<h3> <%= @milkshake.price %></h3>
+</div>
+</div>
 
-<%= link_to "All milkshakes", milkshakes_path %>
+</div>

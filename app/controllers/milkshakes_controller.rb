@@ -1,16 +1,13 @@
 class MilkshakesController < ApplicationController
   before_action :find_index, only: %i[show destroy]
 
-  def home
+  def home; end
 
-  end
-  
   def index
     @milkshakes = Milkshake.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @milkshake = Milkshake.new
