@@ -1,18 +1,15 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+<div class="navbar">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <%= link_to "Home", root_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Milkshakes", milkshakes_path %>
+    </li>
       <li class="nav-item">
-      <%= link_to "Home", root_path %></a>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Milkshakes", milkshakes_path %></a>
-      </li>
-      
-    </ul>
-  </div>
+      <%= link_to "New milkshake", new_milkshake_path %>
+    </li>
+  </ul>
 </div>
 
 <div class="container-show">
