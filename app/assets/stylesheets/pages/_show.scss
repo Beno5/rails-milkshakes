@@ -1,11 +1,9 @@
-body {
-  background-color: #e9d3d3;
-}
 .container-show {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
+
 .container-show h1 {
   margin: 0;
   color: #aa3a3a;
@@ -20,62 +18,11 @@ body {
   color: rgb(177, 9, 9);
   margin-left: 5px;
 }
+
 .list-show {
   display: flex;
- 
 }
 
 .delete_button {
   padding-top: 2px;
-}
-
-
-.card-image {
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  width: 300px;
-}
-.card-milkshake {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content: space-around;
-}
-
-.card-milkshake {
-  width: 850px;
-  height: 400px;
-
-}
-
-
-
-.card-milkshake h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-milkshake p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-milkshake .card-milkshake-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-milkshake-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
 }

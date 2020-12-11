@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Dose < ApplicationRecord
   belongs_to :milkshake
   belongs_to :ingredient

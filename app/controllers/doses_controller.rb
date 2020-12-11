@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DosesController < ApplicationController
   before_action :find_index, only: %i[new create]
   def new

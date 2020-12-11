@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root to: 'milkshakes#home'
   resources :milkshakes, only: %i[index show new create destroy] do
@@ -5,4 +7,3 @@ Rails.application.routes.draw do
   end
   resources :doses, only: %i[destroy]
 end
-

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MilkshakesController < ApplicationController
   before_action :find_index, only: %i[show destroy]
 

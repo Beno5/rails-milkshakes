@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -29,7 +31,7 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: %i[development test]
 
 gem 'cloudinary', '~> 1.16.0'
-
+gem 'pundit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

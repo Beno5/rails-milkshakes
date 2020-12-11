@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Milkshake < ApplicationRecord
   has_one_attached :photo
   has_many :doses, dependent: :destroy

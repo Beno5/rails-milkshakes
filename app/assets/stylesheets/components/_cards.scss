@@ -76,3 +76,51 @@
   font-size: larger;
   transition: 0.5s;
 }
+
+// show page 
+
+.card-image {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 300px;
+}
+.card-milkshake {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-milkshake {
+  width: 850px;
+  height: 400px;
+}
+
+.card-milkshake h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-milkshake p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-milkshake .card-milkshake-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-milkshake-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
