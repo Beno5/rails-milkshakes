@@ -49,12 +49,14 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <%= simple_form_for [ @milkshake, @dose ] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient, label_method: :name, value_method: :id, include_blank: false %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= link_to 'Add ingredient', new_milkshake_dose_path(@milkshake) %>
-
+        <%= f.submit "Add ingrediant" %>
+        <% end %>
       </div>
     </div>
   </div>

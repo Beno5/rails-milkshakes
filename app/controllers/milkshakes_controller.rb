@@ -9,7 +9,9 @@ class MilkshakesController < ApplicationController
     @milkshakes = Milkshake.all
   end
 
-  def show; end
+  def show
+   @dose = Dose.new
+  end
 
   def new
     @milkshake = Milkshake.new
