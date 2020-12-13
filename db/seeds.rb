@@ -16,14 +16,13 @@ Milkshake.destroy_all
 Ingredient.destroy_all
 
 puts 'adding ingredients...'
-ingredients = JSON.parse(open('https://www.themealdb.com/api/json/v1/1/list.php?i=list').read)['meals']
-ingredients.each do |ingredient|
-  Ingredient.create!(name: ingredient['strIngredient'])
-end
+ingredients = ["Milk", "Nuts", "Protein"]
 
 puts 'adding milkshakes...'
-
-# #milkshake1 = Milkshake.create!(name: 'bananna-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
+michael = User.create!(email: "michael@example.com", password: "123456")
+milkshake1 = Milkshake.new(name: 'bananna-milkshake', description: "It's great milkshake. You need to try it!", user: michael)
+milkshake1.photo.attach(io: URI.open("https://res.cloudinary.com/beno5/image/upload/v1607847110/l51viv3jx7zzi0y91m8rl1dkn4xx.jpg"), filename: "milkshake.jpg", content_type: 'image/png')
+milkshake1.save!
 # milkshake2 = Milkshake.create!(name: 'chockolate-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
 # milkshake3 = Milkshake.create!(name: 'protein-milkshake', price: 2, description: "It's great milkshake. You need to try it!")
 # milkshake4 = Milkshake.create!(name: 'kiwi-milkshake', price: 2, description: "It's great milkshake. You need to try it!")

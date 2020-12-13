@@ -32,6 +32,8 @@ gem 'dotenv-rails', groups: %i[development test]
 
 gem 'cloudinary', '~> 1.16.0'
 gem 'pundit'
+gem 'devise'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

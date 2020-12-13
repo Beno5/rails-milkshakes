@@ -1,32 +1,46 @@
 # frozen_string_literal: true
 
 class MilkshakesController < ApplicationController
-  before_action :find_index, only: %i[show destroy]
-
-  def home; end
+  before_action :find_index, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @milkshakes = Milkshake.all
+    @milkshakes = policy_scope(Milkshake)
   end
 
   def show
-   @dose = Dose.new
+    @dose = Dose.new
+    authorize @milkshake
   end
 
   def new
     @milkshake = Milkshake.new
+    authorize @milkshake
   end
 
   def create
     @milkshake = Milkshake.new(milkshake_params)
+    authorize @milkshake
+    @milkshake.user = current_user
     if @milkshake.save
       redirect_to milkshake_path(@milkshake)
     else
       render :new
     end
   end
+  
+  def edit
+    authorize @milkshake
+  end
+  
+  def update
+    authorize @milkshake
+    @milkshake.update(milkshake_params)
+    redirect_to milkshake_path(@milkshake)
+  end
 
   def destroy
+    authorize @milkshake
     @milkshake.destroy
     redirect_to milkshakes_path
   end
@@ -38,6 +52,6 @@ class MilkshakesController < ApplicationController
   end
 
   def milkshake_params
-    params.require(:milkshake).permit(:name, :description, :price, :photo)
+    params.require(:milkshake).permit(:name, :description, :photo, :user_id)
   end
 end

@@ -32,7 +32,9 @@
 
 <% end %>
 </ul>
-
+ <% if policy(@milkshake).edit? %>
+    <%= link_to "Update", edit_milkshake_path(@milkshake), class: "btn btn-primary" %>
+  <% end %>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add ingredient
