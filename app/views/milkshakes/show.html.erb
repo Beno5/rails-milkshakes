@@ -35,6 +35,7 @@
  <% if policy(@milkshake).edit? %>
     <%= link_to "Update", edit_milkshake_path(@milkshake), class: "btn btn-primary" %>
   <% end %>
+  <% if current_user == @milkshake.user %>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add ingredient
@@ -63,7 +64,7 @@
     </div>
   </div>
 </div>
-
+<% end %>
 </div>
 </div>
 

@@ -16,7 +16,7 @@ Milkshake.destroy_all
 Ingredient.destroy_all
 
 puts 'adding ingredients...'
-ingredients = ["Milk", "Nuts", "Protein"]
+ingredients = Ingredient.create([{ name: "Milk"}, { name: "Protein"}, { name: "Nuts"}])
 
 puts 'adding milkshakes...'
 michael = User.create!(email: "michael@example.com", password: "123456")
